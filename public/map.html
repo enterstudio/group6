@@ -9,6 +9,8 @@
        height: 100%;
        margin: 0;
        padding: 0;
+        max-width:90%;
+        margin:auto;
      }
      #map {
        height: 80%;
@@ -19,7 +21,7 @@
  <body>
   <h1>My map</h1>
    <div style="float: right; width: 200px;">
-       <ul> 
+       <ul>
           <li><a href="#" onclick="javascipt:map.panTo({lat: 52.5264792, lng: 13.3480563}); map.setZoom(16)">Lageso</a></li>
 
           <li><a href="#" onclick="javascipt:map.panTo({lat: 52.5542767, lng: 13.1998871}); map.setZoom(16)">BAMF!</a></li>
@@ -40,7 +42,7 @@
 
        map = new google.maps.Map(document.getElementById('map'), {
          center: {lat: 52.5060713, lng: 13.3962265},
-         zoom: 11 
+         zoom: 11
       });
 
        var marker = new google.maps.Marker({
@@ -52,7 +54,7 @@
       new google.maps.Marker({
       map: map,
       position: {lat: 52.5542767, lng: 13.1998871},
-      title: 'BAMF!' 
+      title: 'BAMF!'
         });
 
       new google.maps.Marker({
@@ -71,6 +73,6 @@
    </script>
    <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyC_viYAPxX0PcTdcTS6ep58Ot9ZtgYsqNU&callback=initMap"
    async defer></script>
-  
+
  </body>
   </html>
