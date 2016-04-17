@@ -41,6 +41,10 @@ class ArticleController < ApplicationController
 
    end
 
+   def arbriterlaubnis
+
+  end
+
    def pdf
      @fullname = params[:full_name]
      @birthdate =  params[:date_birth]
