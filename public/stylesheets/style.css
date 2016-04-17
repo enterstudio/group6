@@ -82,3 +82,21 @@ ul#subjects li {
   width: 200px;
   background-color: #ccc;
 }
+
+.container{
+  width: 960px;
+}
+
+#map{
+  float: left;
+  width: 70%;
+  height: 400px;
+}
+
+.locations { 
+    float: left;
+    width: 30%;
+    height: 400px;
+    overflow: auto;
+} 
+

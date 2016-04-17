@@ -19,7 +19,9 @@ Rails.application.routes.draw do
 
 
     get "articles/index" => 'articles#index' 
-   root to: 'articles#index'
+   #root to: 'articles#index'
+   get "map" => 'map#index'
+
    #the defult page of my web application is welcome index---------------------------------
 
   # Example of regular route:
