@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get "article/pdf" => "article#pdf"
   post "article/pdf" => "article#pdf"
+  get "article/arbeiterlaubnis" => "article#arbeiterlaubnis"
   resources :articles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -18,7 +19,9 @@ Rails.application.routes.draw do
 
 
     get "articles/index" => 'articles#index' 
-   root to: 'articles#index'
+   #root to: 'articles#index'
+   get "map" => 'map#index'
+
    #the defult page of my web application is welcome index---------------------------------
 
   # Example of regular route:
