@@ -35,15 +35,29 @@ class ArticleController < ApplicationController
    end
 
    def application
+     @surname = params[:surname]
+     @firstname= params[:firstname]
+     @birthdate =  params[:date_birth]
 
    end
    def araapplication
 
    end
+   def arbeiterlaubnis
+
+   end
 
    def pdf
-     @fullname = params[:full_name]
+     @surname = params[:surname]
+     @firstname= params[:firstname]
      @birthdate =  params[:date_birth]
+     @move_in_date=params[:move_in_date]
+     @new_address=params[:new_address]
+     @new_posatlcode=params[:new_posatlcode]
+     @old_address=params[:old_address]
+     @old_postalcode=params[:old_postalcode]
+     @nationality= params[:nationality]
+     @religion= params[:religion]
    end
 
    def show
