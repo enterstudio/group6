@@ -1,5 +1,4 @@
 class ArticleController < ApplicationController
-  layout 'standard'
   def list
     #here i will list all my articles
 
