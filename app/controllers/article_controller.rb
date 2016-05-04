@@ -56,9 +56,9 @@ class ArticleController < ApplicationController
      @birthdate =  params[:date_birth]
      @move_in_date=params[:move_in_date]
      @new_address=params[:new_address]
-     @new_posatlcode=params[:new_posatlcode]
+     @new_postal_code=params[:new_postal_code].to_s
      @old_address=params[:old_address]
-     @old_postalcode=params[:old_postalcode]
+     @old_postal_code=params[:old_postal_code]
      @nationality= params[:nationality]
      @religion= params[:religion]
    end

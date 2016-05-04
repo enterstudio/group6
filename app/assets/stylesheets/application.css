@@ -1,0 +1,95 @@
+ /*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";/* CSS */body {
+ background: #999;
+ font-family: arial;
+ margin: 0;
+ margin-top: 20px;
+}header {
+ color: skyblue;
+ /*padding: 30px 20px;*/
+ background: black;
+ width: 100%;
+}header h1 {
+ text-align: center;
+ font-size: 50px;
+}nav ul {
+ padding: 0 0 0 330px;
+ display: inline;
+ margin: 0;
+ font-size: 20px;
+}nav ul li {
+ background: black;
+ color: white;
+ display: inline;
+ list-style-type: none;
+ margin: 20px;
+ padding: 0 0 0 0px;
+}nav ul li a {
+ color: white;
+ text-decoration: none;
+}p {
+ color: white;
+ background: gray;
+ padding: 10px;
+}.row {
+ clear: both;
+}.col {
+ float: left;
+ padding: 5px;
+ border-radius: 5px;
+ background: gray;
+ margin: 1%;
+ width: 30%;
+}.cont {
+ clear: both;
+}.contact {
+ float: left;
+ padding: 5px;
+ border-radius: 5px;
+ background: gray;
+ margin: 1%;
+ width: 30%;
+}footer {
+ clear: both;
+ position: absolute;
+ bottom: 0px;
+}.social {
+ position: fixed;
+ bottom: 10px;
+ right: 10px;
+}.social .icon {
+ width: 50px;
+ height: 50px;
+}.article_title {
+ font-size: 18px;
+ font-weight: bold;
+}.div_align_right {
+ float: right;
+ background-color: #cdd;
+}.div_align_left {
+ text-align: left;
+ width: 200px;
+ background-color: #ccc;
+}#map {
+ float: left;
+ width: 70%;
+ height: 400px;
+}.locations {
+ float: left;
+ width: 30%;
+ height: 400px;
+ overflow: auto;
+}
