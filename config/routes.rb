@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :locations
+  get 'map' => 'locations#index'
    get 'article/list' => 'article#list'
 
   get 'article/application' => 'article#application'
@@ -18,9 +20,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 
-    get "articles/index" => 'articles#index' 
+    get "articles/index" => 'articles#index'
    #root to: 'articles#index'
-   get "map" => 'map#index'
+   #get "map" => 'map#index'
 
    #the defult page of my web application is welcome index---------------------------------
 
