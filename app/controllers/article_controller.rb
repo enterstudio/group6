@@ -61,6 +61,17 @@ class ArticleController < ApplicationController
      @old_postal_code=params[:old_postal_code]
      @nationality= params[:nationality]
      @religion= params[:religion]
+     @marital_status= params[:marital_status]
+     @date_of_marriage= params[:date_of_marriage]
+     @id_nr= params[:id_nr]
+     @sirial_number= params[:sirial_number]
+     @place_issue= params[:place_issue]
+     @date_issue= params[:date_issue]
+     @expired_date= params[:expired_date]
+     @sirial_number= params[:sirial_number]
+     @place_issue= params[:place_issue]
+     @date_issue= params[:date_issue]
+     @expired_date= params[:expired_date]
    end
 
    def show
