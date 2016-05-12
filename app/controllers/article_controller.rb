@@ -53,7 +53,7 @@ class ArticleController < ApplicationController
    def pdf
      @surname = params[:surname]
      @firstname= params[:firstname]
-     @birthdate =  params[:date_birth]
+     @date_of_birth=  params[:date_of_birth]
      @move_in_date=params[:move_in_date]
      @new_address=params[:new_address]
      @new_postal_code=params[:new_postal_code].to_s
@@ -65,13 +65,13 @@ class ArticleController < ApplicationController
      @date_of_marriage= params[:date_of_marriage]
      @id_nr= params[:id_nr]
      @sirial_number= params[:sirial_number]
-     @place_issue= params[:place_issue]
-     @date_issue= params[:date_issue]
+     @place_of_issue= params[:place_of_issue]
+     @date_of_issue= params[:date_of_issue]
      @expired_date= params[:expired_date]
-     @sirial_number= params[:sirial_number]
-     @place_issue= params[:place_issue]
-     @date_issue= params[:date_issue]
-     @expired_date= params[:expired_date]
+     @sirial_number_pass= params[:sirial_number_pass]
+     @place_of_issue_pass= params[:place_of_issue_pass]
+     @date_of_issue_pass= params[:date_of_issue_pass]
+     @expired_date_pass= params[:expired_date_pass]
    end
 
    def show
