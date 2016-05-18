@@ -2,110 +2,137 @@
 <div class="container">
 	<form action="/article/pdf" method="POST" class="form-horizontal">
 		<div class="form-group">
-			<label for="move_in_date" class="col-sm-2 control-label">Moving in date</label>
+			<label for="move_in_date" class="col-sm-2 control-label"><%= t("MoveInDate") %></label>
 			<div class="col-sm-10">
-				<input type="date" name="move_in_date" id="move_in_date" placeholder="تاريخ الانتقال">
+				<input type="date" name="move_in_date" id="move_in_date" placeholder="">
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="new_address" class="col-sm-3 control-label">New address</label>
-			<div class="col-sm-9">
-				<input type="text" name="new_address" id="new_address" placeholder="العنوان الجديد">
+			<label for="new_address" class="col-sm-2 control-label"><%= t("NewAddress") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="new_address" id="new_address" placeholder="">
 			</div>
 		</div>
-
-
-
-New Postal Code:
-<input type="text" name="new_postal_code" placeholder="الرمز البريدي">الرمز البريدي
-<br>
-
-Old Address:
-<input type="text" name="old_address" placeholder="العنوان القديم">العنوان القديم
-<br>
-
-Old Postal Code:
-<input type="text" name="old_postal_code" placeholder="الرمز البريدي للعنوان القديم">الرمز البريدي للعنوان القديم
-<br>
-
-
- * SurName:
-<input type="text" name="surname" placeholder=" الكنية" required> الكنية
-<br>
-* FirstName:
-<input type="text" name="firstname" placeholder="الاسم الاول" required>الاسم الكامل
-<br>
-
-Date of Birth:
-<input type="date" name="date_birth" placeholder=" تاريخ الولادة" required> تاريخ الولادة
-<br>
-
-Nationality:
-<input type="text" name="nationality" placeholder="
-الجنسية ">
-الجنسية 
-<br>
-
-Religion:
-<input type="text" name="religion" placeholder="الدين">الدين
-<br>
-
-Marital Status:
-<input type="text" name="Marital_Status" placeholder="الحالة الاجتماعية ">الحالة الاجتماعية 
-<br>
-
-Date of Marriage:
-<input type="Date" name="Date_of_Marriage" placeholder="تاريخ عقد الزواج">تاريخ عقد الزواج
-<br>
-
-
-ID Nr:
-<input type="text" name="id_nr"placeholder="رقم البطاقة الشخصية">رقم البطاقة الشخصية
-<br>
-
-
-Sirial Number(ID):
-<input type="text" name="Sirial_number" placeholder="الرقم التسلسلي للبطاقة">الرقم التسلسلي للبطاقة
-<br>
-
-
-Place of Issue(ID):
-<input type="text" name="Place_issue" placeholder="مكان صدورها">مكان صدورها
-<br>
-
-
-
-Date of Issue(ID):
-<input type="Date" name="Date_issue"placeholder="تاريخ صدورها">تاريخ صدورها
-<br>
-
-Expired Date(ID):
-<input type="Date" name="expired_Date" placeholder="تاريخ انتهائها">تاريخ انتهائها
-<br>
-
-Sirial Number(passport):
-<input type="text" name="Sirial_number" placeholder="الرقم التسلسلي للجواز السفر">الرقم التسلسلي للجواز السفر
-<br>
-
-
-Place of Issue(passport):
-<input type="text" name="Place_issue" placeholder="مكان صدوره">مكان صدوره
-<br>
-
-
-
-Date of Issue(passport):
-<input type="Date" name="Date_issue"placeholder="تاريخ صدوره">تاريخ صدوره
-<br>
-
-Expired Date(passport):
-<input type="Date" name="expired_Date" placeholder="تاريخ انتهائه">تاريخ انتهائه
-<br>
-
-save:
-<input type="submit" value="Convert to PDF" class="btn btn-primary">
-<br>
-
+		<div class="form-group">
+			<label for="New_Postal_Code" class="col-sm-2 control-label"><%= t("NewPostalCode") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="New_Postal_Code" id="New_Postal_Code" placeholder="">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="old_postal_code" class="col-sm-2 control-label"><%= t("Oldpostalcode") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="old_postal_code" id="old_postal_code" placeholder="">
+			</div>
+		</div>
+        <div class="form-group">
+			<label for="olda_ddress" class="col-sm-2 control-label"><%= t("oldaddress") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="olda_ddress" id="olda_ddress" placeholder="">
+			</div>
+		</div>
+         <div class="form-group">
+			<label for="sur_name" class="col-sm-2 control-label"><%= t("surname") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="sur_name" id="sur_name" placeholder="">
+			</div>
+		</div>
+      <div class="form-group">
+			<label for="first_name" class="col-sm-2 control-label"><%= t("firstname") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="first_name" id="first_name" placeholder="">
+			</div>
+		</div>
+      <div class="form-group">
+			<label for="date_birth" class="col-sm-2 control-label"><%= t("datebirth") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="date_birth" id="date_birth" placeholder="">
+			</div>
+		</div>
+      <div class="form-group">
+			<label for="nationality" class="col-sm-2 control-label"><%= t("nationality") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="nationality" id="nationality" placeholder="">
+			</div>
+		</div>
+      <div class="form-group">
+			<label for="Religion" class="col-sm-2 control-label"><%= t("Religion") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Religion" id="Religion" placeholder="">
+			</div>
+		</div>
+       <div class="form-group">
+			<label for="Marital_Status" class="col-sm-2 control-label"><%= t("MaritalStatus") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Marital_Status" id="Marital_Status" placeholder="">
+			</div>
+		</div>
+        <div class="form-group">
+			<label for="Date_of_Marriage" class="col-sm-2 control-label"><%= t("DateofMarriage") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Date_of_Marriage" id="Date_of_Marriage" placeholder="">
+			</div>
+		</div>
+       <div class="form-group">
+			<label for="id_nr" class="col-sm-2 control-label"><%= t("idnr") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="id_nr" id="id_nr" placeholder="">
+			</div>
+		</div>
+      <div class="form-group">
+			<label for="Sirial_number" class="col-sm-2 control-label"><%= t("Sirialnumber") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Sirial_number" id="Sirial_number" placeholder="">
+			</div>
+		</div>
+       <div class="form-group">
+			<label for="Place_issue" class="col-sm-2 control-label"><%= t("Placeissue") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Place_issue" id="Place_issue" placeholder="">
+			</div>
+		</div>
+       <div class="form-group">
+			<label for="Date_issue" class="col-sm-2 control-label"><%= t("Dateissue") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Date_issue" id="Date_issue" placeholder="">
+			</div>
+		</div>
+       <div class="form-group">
+			<label for="expired_Date" class="col-sm-2 control-label"><%= t("expiredDate") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="expired_Date" id="expired_Date" placeholder="">
+			</div>
+		</div>
+        <div class="form-group">
+			<label for="Sirial_number" class="col-sm-2 control-label"><%= t("Sirialnumber") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Sirial_number" id="Sirial_number" placeholder="">
+			</div>
+		</div>
+       <div class="form-group">
+			<label for="Place_issue" class="col-sm-2 control-label"><%= t("Placeissue") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Place_issue" id="Place_issue" placeholder="">
+			</div>
+		</div>
+        <div class="form-group">
+			<label for="Date_issue" class="col-sm-2 control-label"><%= t("Dateissue") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Date_issue" id="Date_issue" placeholder="">
+			</div>
+		</div>
+        <div class="form-group">
+			<label for="expired_Date_passport" class="col-sm-2 control-label"><%= t("expiredDatepassport") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="expired_Date_passport" id="expired_Date_passport" placeholder="">
+			</div>
+		</div> 
+        <div class="form-group">
+			<label for="Convert to PDF" class="col-sm-2 control-label"><%= t("Convert to PDF") %></label>
+			<div class="col-sm-10">
+				<input type="text" name="Convert to PDF" id="Convert to PDF" placeholder="">
+			</div>
+		</div>
 	</form>
 </div>
 
