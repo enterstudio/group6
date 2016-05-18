@@ -32,9 +32,7 @@ class ArticleController < ApplicationController
 
     #render :action => 'list'
    end
-   def set_locale
-   I18n.locale = params[:locale] || I18n.default_locale
-  end
+
    def application
      @surname = params[:surname]
      @firstname= params[:firstname]
