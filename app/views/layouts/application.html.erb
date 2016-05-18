@@ -41,6 +41,14 @@
           <li><a href="/map">map location</a></li>
           <li><a href="/sample">sample</a></li>
           <li><a href="/steps">steps</a></li>
+          <li class="dropdown">
+              <a href="#">Languages</a>
+              <div class="dropdown-content">
+                <%= link_to_unless_current "English", locale: "en" %>
+                <%= link_to_unless_current "Arabic", locale: "ar" %>
+                <%= link_to_unless_current "Deutsch", locale: "de" %>
+              </div>
+          </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
