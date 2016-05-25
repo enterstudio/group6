@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BUREAUCRAZY</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'bootstrap.min.css' %>
+  <%= stylesheet_link_tag 'ie10-viewport-bug-workaround.css' %>
+  <%= stylesheet_link_tag 'cover.css' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= javascript_include_tag 'https://js.stripe.com/v2/' %>
@@ -20,44 +22,62 @@
 </head>
 
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/ ">BUREAUCRAZY</a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-          <li><a href="/article/araapplication">application</a></li>
-          <li><a href="/map">map location</a></li>
-          <li><a href="/sample">sample</a></li>
-          <li><a href="/steps">steps</a></li>
-          <li class="dropdown">
-              <a href="#">Languages</a>
-              <div class="dropdown-content">
-                <%= link_to_unless_current "English", locale: "en" %>
-                <%= link_to_unless_current "Arabic", locale: "ar" %>
-                <%= link_to_unless_current "Deutsch", locale: "de" %>
-              </div>
-          </li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
+    <div class="site-wrapper">
 
-<div class="container">
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+<!-- to be fixed!!!! -->
+     <div class="dropdown-content">
+                        <%= link_to_unless_current "English", locale: "en" %>
+                        <%= link_to_unless_current "Arabic", locale: "ar" %>
+                        <%= link_to_unless_current "Deutsch", locale: "de" %>
+                      </div>
+
+
+
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Bureacrazy</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="/">Home</a></li>
+                  <li><a href="/article/araapplication">Applications</a></li>
+                  <li><a href="#">Sign in</a></li>
+                  <li><a href="/map">Maps</a></li>
+                  <li><a href="/article/contactus">Contact us</a></li>
+        			
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          
+
+<!-- Here is the rails way to include content -->
+
   <%= yield %>
-</div>
 
-</div><!-- /.container -->
+
+          
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>#Group 6  ,<a href="redi-school.org"> ReDI school of digital integration</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
 </body>
 </html>
