@@ -13,7 +13,28 @@
 
 ActiveRecord::Schema.define(version: 20160508103439) do
 
-  create_table "article", force: :cascade do |t|
+  create_table "articles", force: :cascade do |t|
+
+    t.datetime "move_in_date"
+     t.datetime "date_of_birth"
+     t.datetime "date_of_marriage"
+     t.datetime "date_of_issue"
+     t.datetime "expired_date"
+     t.datetime "date_of_issue_pass"
+     t.datetime "expired_date_pass"
+     t.string "new_address"
+     t.string "new_postal_code"
+     t.string "old_postal_code"
+     t.string "old_address"
+     t.string "surname"
+     t.string "firstname"
+     t.string "nationality"
+     t.string "religion"
+     t.string "marital_status"
+     t.string "serial_number"
+     t.string "place_of_issue"
+     t.string "serial_number_pass"
+     t.string "place_of_issue_pass"
   end
 
   create_table "locations", force: :cascade do |t|

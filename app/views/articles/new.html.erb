@@ -1,0 +1,145 @@
+<%= form_for @article, url: {action: "pdf"}, html: {class: "form-horizontal"} do |f| %>
+<% if @article.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@article.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+    <ul>
+    <% @article.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="container">
+
+  <div class="pull-left col-sm-6 col-md-6 col-xs-12">
+    <div class="form-group">
+      <%= f.label(:move_in_date,t("MoveInDate"), :class =>'') %>
+      <div class="">
+        <%= f.date_field(:move_in_date) %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:new_address,t("NewAddress"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:new_address,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:new_postal_code,t("NewPostalCode"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:new_postal_code,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:old_postal_code,t("Oldpostalcode"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:old_postal_code,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:old_address,t("oldaddress"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:old_address,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:surname,t("surname"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:surname,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:firstname,t("firstname"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:firstname,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:date_of_birth,t("datebirth"), :class =>'') %>
+      <div class="">
+        <%= f.date_field(:date_of_birth) %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:nationality,t("nationality"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:nationality,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:religion,t("Religion"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:religion,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:marital_status,t("MaritalStatus"), :class =>'') %>
+      <div class="">
+        <%= select_tag(:marital_status, options_for_select([[t("MaritalStatusSingle"), 1], [t("MaritalStatusMarried"), 2], [t("MaritalStatusDivorced"), 3]])) %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:date_of_marriage,t("DateofMarriage"), :class =>'') %>
+      <div class="">
+        <%= f.date_field(:date_of_marriage) %>
+      </div>
+    </div>
+  </div>
+  <div class="pull-left col-sm-6 col-md-6 col-xs-12">
+    <div class="form-group">
+      <%= f.label(:serial_number,t("Serialnumber"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:serial_number,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:place_of_issue,t("Placeissue"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:place_of_issue,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:date_of_issue,t("Dateissue"), :class =>'') %>
+      <div class="">
+        <%= f.date_field(:date_of_issue) %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:expired_date,t("expiredDate"), :class =>'') %>
+      <div class="">
+        <%= f.date_field(:expired_date) %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:serial_number_pass,t("Serialnumber"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:serial_number_pass,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:place_of_issue_pass,t("Placeissue"), :class =>'') %>
+      <div class="">
+        <%= f.text_field(:place_of_issue_pass,:class => "textfield") %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:date_of_issue_pass,t("Dateissue"), :class =>'') %>
+      <div class="">
+        <%= f.date_field(:date_of_issue_pass) %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label(:expired_date_pass,t("expiredDatepassport"), :class =>'') %>
+      <div class="">
+        <%= f.date_field(:expired_date_pass) %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-9 col-sm-offset-3">
+      </div>
+    </div>
+    <%= f.submit "Convert to PDF", html: {class: "btn btn-primary"} %>
+  </div>
+</div>
+<% end %>
