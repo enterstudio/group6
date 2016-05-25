@@ -11,7 +11,6 @@ ar:
   Religion: "الدين"
   MaritalStatus: "الحالة الاجتماعية"
   DateofMarriage: "تاريخ عقد الزواج"
-  idnr: "رقم البطاقة الشخصية"
   Sirialnumber: "الرقم التسلسلي للبطاقة"
   Placeissue: "مكان صدورها"
   Dateissue: "تاريخ صدورها"
