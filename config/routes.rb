@@ -2,19 +2,16 @@ Rails.application.routes.draw do
 
   resources :locations
   get 'map' => 'locations#index'
-  # resources :articles
+   get 'article/list' => 'article#list'
 
-  get 'articles/list' => 'articles#list'
+  get 'article/application' => 'article#application'
+  get 'article/araapplication' => 'article#araapplication'
+  get "article/new" => "article#new"
 
-  get 'articles/application' => 'articles#application'
-  get 'articles/araapplication' => 'articles#new'
-  # get "articles/new" => "articles#new"
-  post "articles/create" => "articles#create"
-
-  get "article/pdf" => "articles#pdf"
-  post "article/pdf" => "articles#pdf"
-  get "articles/arbeiterlaubnis" => "articles#arbeiterlaubnis"
-  #resources :articles
+  get "article/pdf" => "article#pdf"
+  post "article/pdf" => "article#pdf"
+  get "article/arbeiterlaubnis" => "article#arbeiterlaubnis"
+  resources :articles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class ArticleController < ApplicationController
   def list
     #here i will list all my articles
 
@@ -39,9 +39,9 @@ class ArticlesController < ApplicationController
      @birthdate =  params[:date_birth]
 
    end
-  #  def araapplication
-   #
-  #  end
+   def araapplication
+
+   end
    def arbeiterlaubnis
 
    end
@@ -51,46 +51,45 @@ class ArticlesController < ApplicationController
   end
 
    def pdf
-     @article = Article.new(article_params)
+     @surname = params[:surname]
+     @firstname= params[:firstname]
+     @date_of_birth=  params[:date_of_birth]
+     @move_in_date=params[:move_in_date]
+     @new_address=params[:new_address]
+     @new_postal_code=params[:new_postal_code].to_s
+     @old_address=params[:old_address]
+     @old_postal_code=params[:old_postal_code]
+     @nationality= params[:nationality]
+     @religion= params[:religion]
+     @marital_status= params[:marital_status]
+     @date_of_marriage= params[:date_of_marriage]
+     @id_nr= params[:id_nr]
+     @sirial_number= params[:sirial_number]
+     @place_of_issue= params[:place_of_issue]
+     @date_of_issue= params[:date_of_issue]
+     @expired_date= params[:expired_date]
+     @sirial_number_pass= params[:sirial_number_pass]
+     @place_of_issue_pass= params[:place_of_issue_pass]
+     @date_of_issue_pass= params[:date_of_issue_pass]
+     @expired_date_pass= params[:expired_date_pass]
+   end
 
-     @surname = article_params[:surname]
-     @firstname= article_params[:firstname]
-     @date_of_birth=  article_params[:date_of_birth]
-     @move_in_date=article_params[:move_in_date]
-     @new_address=article_params[:new_address]
-     @new_postal_code=article_params[:new_postal_code].to_s
-     @old_address=article_params[:old_address]
-     @old_postal_code=article_params[:old_postal_code]
-     @nationality= article_params[:nationality]
-     @religion= article_params[:religion]
-     @marital_status= article_params[:marital_status]
-     @date_of_marriage= article_params[:date_of_marriage]
-     @sirial_number= article_params[:sirial_number]
-     @place_of_issue= article_params[:place_of_issue]
-     @date_of_issue= article_params[:date_of_issue]
-     @expired_date= article_params[:expired_date]
-     @sirial_number_pass= article_params[:sirial_number_pass]
-     @place_of_issue_pass= article_params[:place_of_issue_pass]
-     @date_of_issue_pass= article_params[:date_of_issue_pass]
-     @expired_date_pass= article_params[:expired_date_pass]
+   def show
+     # here i will see my article detail page
    end
 
    def new
     @article = Article.new
 
-     # here i create a new articles and to save the date base
+     # here i create a new article and to save the date base
    end
 
    def edit
-     # here i will update all properties of my articles
+     # here i will update all properties of my article
    end
 
    def delete
-     # here i will delete one articles
-   end
-
-   def article_params
-     params.require(:article).permit!
+     # here i will delete one article
    end
 
 end

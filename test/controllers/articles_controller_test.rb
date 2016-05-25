@@ -16,15 +16,15 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create articles" do
+  test "should create article" do
     assert_difference('Article.count') do
-      post :create, articles: {author: @article.author, date: @article.date, description: @article.description, title: @article.title }
+      post :create, article: { author: @article.author, date: @article.date, description: @article.description, title: @article.title }
     end
 
-    assert_redirected_to article_path(assigns(:articles))
+    assert_redirected_to article_path(assigns(:article))
   end
 
-  test "should show articles" do
+  test "should show article" do
     get :show, id: @article
     assert_response :success
   end
@@ -34,12 +34,12 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update articles" do
-    patch :update, id: @article, articles: {author: @article.author, date: @article.date, description: @article.description, title: @article.title }
-    assert_redirected_to article_path(assigns(:articles))
+  test "should update article" do
+    patch :update, id: @article, article: { author: @article.author, date: @article.date, description: @article.description, title: @article.title }
+    assert_redirected_to article_path(assigns(:article))
   end
 
-  test "should destroy articles" do
+  test "should destroy article" do
     assert_difference('Article.count', -1) do
       delete :destroy, id: @article
     end
