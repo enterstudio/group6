@@ -1,4 +1,9 @@
 en:
+  Home: "Home"
+  Applications: "Applications"
+  ContactUs: "ContactUs"
+  Signin: "Signin"
+  Maps: "Maps"
   MoveInDate: "Move in Date"
   NewAddress: "New Address"
   NewPostalCode: "New Postal Code"

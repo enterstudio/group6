@@ -1,23 +1,29 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Locations</h1>
 
-  <div id="map"></div>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h1>Listing Locations</h1>
+  <div class="row">
+    <div class="col-sm-9">
+      <div id="map"></div>
+    </div>
+    <div class="col-sm-3">
+      <div class="locations" >
+        <ul>
+          <% @locations.each do |location| %>
+          <li>
+            <a href="#" onclick="javascipt:map.panTo({lat: <%= location.lat %>, lng: <%= location.long %>}); map.setZoom(16)"><%= location.name %></a> |
+            <%= link_to 'Edit', edit_location_path(location) %> |
+            <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </li>
+          <% end %>
+        </ul>
+        <%= link_to 'New Location', new_location_path %>
+      </div>
 
-<div class="locations" >
-  <ul>
-    <% @locations.each do |location| %>
-    <li>
-      <a href="#" onclick="javascipt:map.panTo({lat: <%= location.lat %>, lng: <%= location.long %>}); map.setZoom(16)"><%= location.name %></a> |
-      <%= link_to 'Edit', edit_location_path(location) %> |
-      <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </li>
-    <% end %>
-    </ul>
-
-  <br>
-
-  <%= link_to 'New Location', new_location_path %>
+    </div>
+  </div>
+</div>
 
   <script type="text/javascript">
 
@@ -68,14 +74,10 @@
       });
     }
   }
-
-
-
-
-   </script>
+  </script>
 
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_viYAPxX0PcTdcTS6ep58Ot9ZtgYsqNU&callback=initMap"
    async defer></script>
 
- </body>
-  </html>
+</body>
+</html>

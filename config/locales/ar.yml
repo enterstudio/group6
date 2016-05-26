@@ -1,4 +1,9 @@
 ar:
+  Home: "الصفحة الرئيسية"
+  ContactUs: "اتصل بنا"
+  Applications: "الطلبات"
+  Signin: "التسجيل"
+  Maps: "الخرائط"
   MoveInDate: "تاريخ الانتقال"
   NewAddress: "العنوان الجديد"
   NewPostalCode: "الرمز البريدي"

@@ -29,31 +29,35 @@
 
         <div class="cover-container">
 
-<!-- to be fixed!!!! -->
-     <div class="dropdown-content">
-                        <%= link_to_unless_current "English", locale: "en" %>
-                        <%= link_to_unless_current "Arabic", locale: "ar" %>
-                        <%= link_to_unless_current "Deutsch", locale: "de" %>
-                      </div>
+          <!-- to be fixed!!!! -->
 
 
-
-
+        
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand">Bureacrazy</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="/">Home</a></li>
-                  <li><a href="/article/araapplication">Applications</a></li>
-                  <li><a href="#">Sign in</a></li>
-                  <li><a href="/map">Maps</a></li>
-                  <li><a href="/article/contactus">Contact us</a></li>
-        			
+                  <li class="active"><a href="<%= root_url %>"><%= t("Home") %></a></li>
+                  <li><a href="<%= article_araapplication_url %>"><%= t("Applications") %></a></li>
+                  <li><a href="#"><%= t("Signin") %></a></li>
+                  <li><a href="<%= map_url %>"><%= t("Maps") %></a></li>
+                  <li><a href="#"><%= t("ContactUs") %></a></li>
+        			     <li>
+                      <div class="dropdown">
+                        <a href="#" class="dropbtn">Language</a>
+                        <div class="dropdown-content">
+                          <%= link_to_unless_current "English", locale: "en" %>
+                          <%= link_to_unless_current "Arabic", locale: "ar" %>
+                          <%= link_to_unless_current "Deutsch", locale: "de" %>
+                        </div>
+                      </div>
+                  </li>
                 </ul>
               </nav>
             </div>
           </div>
+        </div>
 
           
 
@@ -73,8 +77,6 @@
         </div>
 
       </div>
-
-    </div>
 
 
 
