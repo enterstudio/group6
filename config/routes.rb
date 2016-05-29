@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :locations
-  get 'map' => 'locations#index'
+  get 'map' => 'locations#index2'
    get 'article/list' => 'article#list'
 
   get 'article/application' => 'article#application'
@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-
   root 'welcome#index'
 
 

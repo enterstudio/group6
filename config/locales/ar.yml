@@ -1,4 +1,9 @@
 ar:
+  Home: "الصفحة الرئيسية"
+  ContactUs: "اتصل بنا"
+  Applications: "الطلبات"
+  Signin: "التسجيل"
+  Maps: "الخرائط"
   MoveInDate: "تاريخ الانتقال"
   NewAddress: "العنوان الجديد"
   NewPostalCode: "الرمز البريدي"
@@ -11,7 +16,6 @@ ar:
   Religion: "الدين"
   MaritalStatus: "الحالة الاجتماعية"
   DateofMarriage: "تاريخ عقد الزواج"
-  idnr: "رقم البطاقة الشخصية"
   Sirialnumber: "الرقم التسلسلي للبطاقة"
   Placeissue: "مكان صدورها"
   Dateissue: "تاريخ صدورها"
