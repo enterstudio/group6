@@ -57,11 +57,15 @@
       directionsService = new google.maps.DirectionsService();
 
       var start = {lat: position.coords.latitude, lng: position.coords.longitude};
-      var end = {lat: 52.5376581, lng: 13.3496172};
+     var end = {lat: 52.5376581, lng: 13.3496172};
+    //  getElementById('end').value
+      //var end =
+
+
       var request = {
         origin:start,
         destination:end,
-        travelMode: google.maps.TravelMode.DRIVING
+        travelMode: google.maps.TravelMode.TRANSIT
       };
 
       directionsDisplay.setMap(map);

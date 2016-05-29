@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :locations
-  get 'map' => 'locations#index'
+  get 'map' => 'locations#index2'
    get 'article/list' => 'article#list'
 
   get 'article/application' => 'article#application'
