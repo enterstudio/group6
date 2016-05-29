@@ -84,7 +84,26 @@
       </select>
     </div>
     <div id="right-panel"></div>
-    <div id="map"></div>
+    <div class="row">
+      <div class="col-sm-9">
+        <div id="map"></div>
+      </div>
+      <div class="col-sm-3">
+        <div class="locations" >
+          <ul>
+            <% @locations.each do |location| %>
+            <li>
+              <a href="#" onclick="javascipt:map.panTo({lat: <%= location.lat %>, lng: <%= location.long %>}); map.setZoom(16)"><%= location.name %></a> |
+              <%= link_to 'Edit', edit_location_path(location) %> |
+              <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </li>
+            <% end %>
+          </ul>
+          <%= link_to 'New Location', new_location_path %>
+        </div>
+
+      </div>
+    </div>
     <script>
       function initMap() {
         var directionsDisplay = new google.maps.DirectionsRenderer;
