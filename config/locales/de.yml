@@ -1,4 +1,9 @@
 de:
+  Home: "Start"
+  ContactUs: "Kontakt uns"
+  Applications: "Formular"
+  Signin: "einlogen"
+  Maps: "Karte"
   MoveInDate: "Einzugstag"
   NewAddress: "Neue Addresses"
   NewPostalCode: "Neue Postleitzahl"
@@ -11,7 +16,6 @@ de:
   Religion: "Religion"
   MaritalStatus: "Familienstand"
   DateofMarriage: "Tag der Hochzeit"
-  idnr: "Identifizierungsnummer "
   Sirialnumber : "Ordnungsnummer"
   Placeissue: "Platz Ausgabe"
   Dateissue: "Datum Ausgabe"
