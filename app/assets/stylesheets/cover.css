@@ -6,7 +6,15 @@
 a,
 a:focus,
 a:hover {
+  color: #333;
+}
+.masthead {
   color: #fff;
+  a,
+  a:focus,
+  a:hover {
+    color: #fff;
+  } 
 }
 
 /* Custom default button */
@@ -49,6 +57,7 @@ body {
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
+  padding-top: 100px;
 }
 .cover-container {
   margin-right: auto;
