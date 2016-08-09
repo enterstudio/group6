@@ -6,7 +6,15 @@
 a,
 a:focus,
 a:hover {
+  color: #333;
+}
+.masthead {
   color: #fff;
+  a,
+  a:focus,
+  a:hover {
+    color: #fff;
+  }
 }
 
 /* Custom default button */
@@ -27,7 +35,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-image: url("http://localhost:3000/PicsArt_05-16-06.33.35.jpg");
+  background-image: url("");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -49,6 +57,7 @@ body {
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
+  padding-top: 100px;
 }
 .cover-container {
   margin-right: auto;
