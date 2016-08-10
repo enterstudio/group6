@@ -1,8 +1,22 @@
-
+<style>
+html,
+body {
+  height: 100%;
+  background-image: url("/berlin.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 3px 4px rgba(0,0,0,.5);
+}
+</style>
 <div class="inner cover">
   <h1 class="cover-heading"><span style="font-size: 50px">W</span>elcome to <span style="font-size: 50px">B</span>erlin</h1>
   <p class="lead">We as a team of a new comers and beginners will help you as hard as we can to understand the paperwork and bureaucracy in Berlin. Hope you a nice start</p>
   <p class="lead">
-    <a href="#" class="btn btn-lg btn-default">New here </a>
+    <a href="#" class="btn btn-lg btn-default"><label for="New-Here" class="col-sm-2 control-label"><%= t("NewHere") %></label></a>
+
   </p>
 </div>
